@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.86.0'
+project:
+    name: Sales-Forecasting-and-Demand-Planning-Optimization
+    package:
+        name: Sales-Forecasting-and-Demand-Planning-Optimization
+        api_version: '60.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Sales-Forecasting-and-Demand-Planning-Optimization/tests
+            options:
+                outputdir: robot/Sales-Forecasting-and-Demand-Planning-Optimization/results
+
+    robot_testdoc:
+        options:
+            path: robot/Sales-Forecasting-and-Demand-Planning-Optimization/tests
+            output: robot/Sales-Forecasting-and-Demand-Planning-Optimization/doc/Sales-Forecasting-and-Demand-Planning-Optimization_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
